@@ -1,0 +1,383 @@
+/* CSS du portfolio d'Arezki Ihdene */
+
+/* Couleurs générales */
+:root {
+    --vert: #4b8b3b;
+    --vert-fonce: #35692b;
+    --fond: #ffffff;
+    --fond-clair: #f4f7f3;
+    --texte: #303830;
+    --gris: #657065;
+    --bordure: #e1e8df;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texte);
+    background-color: var(--fond);
+    line-height: 1.7;
+}
+
+section {
+    scroll-margin-top: 70px;
+}
+
+.section-padding {
+    padding: 75px 0;
+}
+
+.section-light {
+    background-color: var(--fond-clair);
+}
+
+/* Barre de navigation */
+.navbarScroll {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+    padding: 12px 0;
+}
+
+.navbar-brand {
+    color: var(--vert-fonce);
+    font-size: 1.35rem;
+    font-weight: bold;
+}
+
+.navbar-brand:hover {
+    color: var(--vert);
+}
+
+.navbar .nav-link {
+    color: #414a41;
+    font-weight: 600;
+    padding: 8px 13px !important;
+}
+
+.navbar .nav-link:hover {
+    color: var(--vert);
+}
+
+/* Accueil */
+.bgimage {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(rgba(16, 27, 17, 0.67), rgba(16, 27, 17, 0.67)),
+        url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80") center / cover no-repeat;
+    color: white;
+    padding: 120px 0 80px;
+}
+
+.hero-text {
+    max-width: 760px;
+}
+
+.hero_title {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+.hero_desc {
+    max-width: 680px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+.btn-success {
+    background-color: var(--vert);
+    border-color: var(--vert);
+    padding: 10px 20px;
+}
+
+.btn-success:hover {
+    background-color: var(--vert-fonce);
+    border-color: var(--vert-fonce);
+}
+
+/* Titres */
+.section-title {
+    color: var(--vert-fonce);
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 3px;
+    margin: 13px auto 0;
+    background-color: var(--vert);
+    border-radius: 2px;
+}
+
+.section-intro {
+    max-width: 650px;
+    text-align: center;
+    color: var(--gris);
+    margin: 0 auto 25px;
+}
+
+/* À propos */
+.imageAboutPage {
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+}
+
+#about p {
+    color: #4f594f;
+}
+
+.about-list {
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.about-list li {
+    margin-bottom: 7px;
+}
+
+.about-list strong {
+    color: var(--vert-fonce);
+}
+
+/* Cartes de compétences */
+.servicesText {
+    border: 1px solid var(--bordure);
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.servicesText:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.09);
+}
+
+.servicesText .card-body {
+    padding: 25px;
+}
+
+.servicesIcon {
+    color: var(--vert);
+    font-size: 2.4rem;
+}
+
+.servicesText .card-title {
+    color: var(--vert-fonce);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.servicesText .card-text {
+    color: var(--gris);
+}
+
+/* Cartes des projets */
+.portfolioContent {
+    border: 1px solid var(--bordure);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.portfolioContent:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.09);
+}
+
+.portfolioContent .card-img-top {
+    width: 100%;
+    height: 205px;
+    object-fit: cover;
+}
+
+.portfolioContent .card-body {
+    padding: 22px;
+}
+
+.portfolioContent .card-title {
+    color: var(--vert-fonce);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.portfolioContent .card-text {
+    color: var(--gris);
+}
+
+.project-label {
+    display: inline-block;
+    padding: 4px 9px;
+    color: var(--vert-fonce);
+    background-color: #edf5e9;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.project-note {
+    color: var(--gris);
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* Contact */
+.map-container {
+    width: 100%;
+    height: 430px;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid var(--bordure);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.map-caption {
+    color: var(--gris);
+    font-size: 0.85rem;
+    margin-top: 8px;
+}
+
+.contact-box {
+    background-color: white;
+    padding: 25px;
+    border: 1px solid var(--bordure);
+    border-radius: 8px;
+    height: 100%;
+}
+
+.contact-box h3 {
+    color: var(--vert-fonce);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.contact-box p {
+    margin: 12px 0;
+}
+
+.contact-box p i {
+    width: 22px;
+    color: var(--vert);
+}
+
+.small-note {
+    color: var(--gris);
+    font-size: 0.85rem;
+}
+
+.form-control {
+    padding: 11px 12px;
+    border-color: #d9e1d7;
+}
+
+.form-control:focus {
+    border-color: var(--vert);
+    box-shadow: 0 0 0 0.2rem rgba(75, 139, 59, 0.15);
+}
+
+/* Pied de page */
+#footer {
+    background-color: #263326;
+    color: white;
+    padding: 25px 0 12px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 12px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.25rem;
+}
+
+.social-icons a:hover {
+    color: #a7d59a;
+}
+
+#footer p {
+    margin-bottom: 0;
+    color: #dce5d9;
+    font-size: 0.9rem;
+}
+
+/* Tablettes et téléphones */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        padding-top: 10px;
+    }
+
+    .bgimage {
+        min-height: 540px;
+        background-position: center;
+    }
+
+    .imageAboutPage {
+        height: 320px;
+        margin-bottom: 20px;
+    }
+
+    .map-container {
+        height: 330px;
+    }
+}
+
+@media (max-width: 575px) {
+    .section-padding {
+        padding: 55px 0;
+    }
+
+    .hero_title {
+        font-size: 2.25rem;
+    }
+
+    .hero_desc {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .imageAboutPage {
+        height: 260px;
+    }
+
+    .portfolioContent .card-img-top {
+        height: 190px;
+    }
+
+    .contact-box {
+        padding: 20px;
+    }
+
+    .map-container {
+        height: 270px;
+    }
+}
